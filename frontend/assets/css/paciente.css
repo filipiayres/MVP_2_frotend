@@ -1,0 +1,62 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .modal-body {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    background-color: #f8f9fa;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .modal-title {
+    color: #343a40;
+  }
+  
+  .modal-footer {
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  

@@ -1,0 +1,36 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #53b373;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 18px;
+    max-width: 400px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  

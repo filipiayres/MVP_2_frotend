@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <title>Hospital API Paciente</title>
+ 
+</head>
+
+<body background="assets/images/pacientes.jpeg">
+<div class="container">
+  <h1 class="mt-5 mb-4">Cadastro de pacientes Hospital ABC</h1>
+</div>
+<ul>
+  <li><a href="index.html" >Home</a></li>
+  <li><a href="paciente.html" >Pacientes</a></li>
+</ul>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Adicione aqui os dados do Paciente</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+    <!-- Os dados inseridos serão exibidos aqui -->
+  </tbody>
+</table>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal">Adicionar Paciente</button>
+
+</div>
+
+</body>
+
+<!-- Modal para adicionar paciente -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Adicionar Paciente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulário para inserir e editar paciente -->
+        <form id="pacienteForm">
+          <input type="hidden" id="pacienteID">
+          <div class="form-group">
+            <label for="pacienteNome">Nome</label>
+            <input type="text" class="form-control" id="pacienteNome" placeholder="Digite o Nome">
+          </div>
+          <div class="form-group">
+            <label for="pacienteCPF">CPF</label>
+            <input type="text" class="form-control" id="pacienteCPF" placeholder="Digite o CPF">
+          </div>
+          <div class="form-group">
+            <label for="pacienteCEP">CEP</label>
+            <input type="text" class="form-control" id="pacienteCEP" onblur="getEndereco(this);" placeholder="Digite o CEP">
+          </div>
+          <div class="form-group">
+            <label for="pacienteBairro">Bairro</label>
+            <input type="text" class="form-control" disabled id="pacienteBairro" placeholder="Digite o Bairro">
+          </div>
+          <div class="form-group">
+            <label for="pacienteRua">Rua</label>
+            <input type="text" class="form-control" disabled id="pacienteRua" placeholder="Digite o Rua">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="savePaciente" onclick="adicionarPaciente();">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="assets/js/paciente.js"></script>
+<script>
+  $( document ).ready(function() {
+    fetchAndRenderPacientes()
+  });
+</script>
+<link rel="stylesheet" href="assets/css/paciente.css">
+
+
+</body>
+</html>
